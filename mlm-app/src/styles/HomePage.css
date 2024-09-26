@@ -1,0 +1,86 @@
+/* src/styles/HomePage.css */
+ 
+.home-container {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align items to the right */
+    min-height: 100vh; /* Full height of the viewport */
+    color: white; /* Text color */
+    padding: 20px; /* Add some padding */
+    background-size: cover; /* Ensure background covers the entire container */
+    background-position: center; /* Center the background image */
+    margin: 0; /* Ensure no default margin */
+  }
+ 
+  .hero-banner {
+    max-width: 400px; /* Limit width of the text section */
+    text-align: left; /* Align text to the left */
+  }
+ 
+  .fade-in {
+    animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
+    opacity: 0; /* Start hidden */
+    animation-fill-mode: forwards; /* Keep the end state */
+  }
+ 
+  .fade-in:nth-child(1) {
+    animation-delay: 0.5s; /* Delay for the first h1 */
+  }
+ 
+  .fade-in:nth-child(2) {
+    animation-delay: 1s; /* Delay for the second h2 */
+  }
+ 
+  .fade-in:nth-child(3) {
+    animation-delay: 1.5s; /* Delay for the p element */
+  }
+ 
+  .fade-in:nth-child(4),
+  .fade-in:nth-child(5) {
+    animation-delay: 2s; /* Delay for buttons */
+  }
+ 
+  @keyframes fadeIn {
+    0% {
+      opacity: 0; /* Start fully transparent */
+      transform: translateY(20px); /* Slightly move down */
+    }
+    100% {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Move to original position */
+    }
+  }
+ 
+  button {
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+ 
+  button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+ 
+  .button-container {
+    display: flex; /* Display buttons in a row */
+    margin-top: 20px; /* Space between buttons and text */
+  }
+ 
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 10px; /* Reduce padding on smaller screens */
+    }
+ 
+    .hero-banner {
+      max-width: 90%; /* Allow more width on smaller screens */
+    }
+  }
+ 
+ 
+  
